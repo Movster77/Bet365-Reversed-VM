@@ -3,7 +3,7 @@ This is a repo containing documentation on the full reversal of the VM to figure
 If you need to contact me, my telegram is @MovistarSucks
 
 
-## Reverse‑engineering the “Netclass3” VM – technical walkthrough
+## Reverse‑engineering the Bet365 custom VM – technical walkthrough
 
 ### 1. Getting a clean disassembly
 1) Extract the embedded base64 blob, decode to raw bytecode.
