@@ -58,14 +58,3 @@ Expansion:
 ### 8. Runtime capture
   - Wrap Math.random to log "r53", read "localStorage.cf4", rebuild counter with the same hash.
   - Listen for "xcft" events.
-
-### 10. Pitfalls encountered
-- CALL_ENTER width had to be fixed; otherwise disasm diverges.
-- Patching the VM’s step function can crash the runtime; observing via Math.random + events is safer.
-- The IV derivation does not use timestamp; only cf4 + r53 matter.
-
-### 11. Why this is enough
-- The AES key is static in bytecode.
-- IV is deterministic from per‑session cf4 + r53.
-- Ciphertext is emitted as event `detail`.
-→ Capturing `r53`, `cf4`, counter, and ciphertext in one session is sufficient to decrypt all tokens from that session.
